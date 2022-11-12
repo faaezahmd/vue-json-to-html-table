@@ -5,8 +5,12 @@
       :key="index"
       class="row-data m-2 d-flex"
     >
-      <div class="key p-2 text-capitalize d-inline-block">
-        {{ keyTitle(row) }} ({{ checkValueType(data[row]) }})
+      <div class="key p-2 d-inline-block">
+        <div class="text-capitalize ">
+
+          {{ keyTitle(row) }} ({{ checkValueType(data[row]) }})
+        </div>
+        <div style="font-family: monospace;">key: {{row}}</div>
       </div>
       <div v-if="['string', 'number'].includes(checkValueType(data[row]))">
         <div class="value p-2 d-inline-block">{{ data[row] }}</div>
@@ -18,12 +22,12 @@
             {{ arrRow }}
           </div>
           <div v-else>
-            <VueJsonToTable :data="arrRow" />
+            <VueJsonToHtmlTable :data="arrRow" />
           </div>
         </div>
       </div>
       <div v-else>
-        <VueJsonToTable :data="data[row]" />
+        <VueJsonToHtmlTable :data="data[row]" />
       </div>
     </div>
   </div>
@@ -31,7 +35,7 @@
 
 <script>
 export default {
-  name: "VueJsonToTable",
+  name: "VueJsonToHtmlTable",
   props: {
     data: {
       type: Object
@@ -57,6 +61,10 @@ export default {
 </script>
 
 <style scoped>
+
+.table-main {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .m-2 {
   margin: .5rem!important;
 }
