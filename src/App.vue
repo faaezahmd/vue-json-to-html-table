@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { VueJsonToHtmlTable } from './components/';
+import VueJsonToHtmlTable from './components/';
 import json from "./data.json";
 
 export default {

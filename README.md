@@ -1,7 +1,41 @@
-# Vue 3 + Vite
+# vue-json-to-html-table
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A Vue.js 3 component to transform json data in to html.
 
-## Recommended IDE Setup
+## Installation
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+`npm install vue-json-to-html-table`
+
+## Usage
+
+For vue-cli user:
+
+```javascript
+import VueJsonToHtmlTable from 'vue-json-to-html-table';
+import 'vue-json-to-html-table/dist/style.css';
+```
+
+In your App.vue:
+```jsx
+<template>
+  <div id="app">
+    <VueJsonToHtmlTable :data="jsonData" />
+  </div>
+</template>
+
+import VueJsonToHtmlTable from 'vue-json-to-html-table';
+
+export default {
+  components: {
+    ...,
+    VueJsonToHtmlTable
+  }
+}
+```
+
+*Important: data must be in valid json format.*
+
+## Configuration
+| Prop   |  Details |
+|----------|------|
+| data | Data in valid json format |

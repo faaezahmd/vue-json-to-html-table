@@ -3,15 +3,16 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/my-lib.umd.js",
-  "module": "./dist/my-lib.es.js",
+  "main": "./dist/vue-json-to-html-table.umd.js",
+  "module": "./dist/vue-json-to-html-table.es.js",
   "exports": {
     ".": {
-      "import": "./dist/my-lib.es.js",
-      "require": "./dist/my-lib.umd.js"
-    }
+      "import": "./dist/vue-json-to-html-table.es.js",
+      "require": "./dist/vue-json-to-html-table.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
   },
-  "version": "0.0.1",
+  "version": "0.0.5",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

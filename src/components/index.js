@@ -1,3 +1,3 @@
-/* eslint-disable import/prefer-default-export */
+import VueJsonToHtmlTable from './VueJsonToHtmlTable.vue';
 
-export { default as VueJsonToHtmlTable } from './VueJsonToHtmlTable.vue';
+export default VueJsonToHtmlTable;
