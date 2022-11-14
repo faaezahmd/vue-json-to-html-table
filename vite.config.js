@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/components/index.js'),
-      name: 'VueJsonToHtmlTable',
-      fileName: (format) => `vue-json-to-html-table.${format}.js`,
+      name: 'Vue3JsonToHtml',
+      fileName: (format) => `vue3-json-to-html.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],
