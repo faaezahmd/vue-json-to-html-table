@@ -22,12 +22,12 @@
             {{ arrRow }}
           </div>
           <div v-else>
-            <Vue3JsonToHtml :data="arrRow" />
+            <VueJsonToHtmlTable :data="arrRow" />
           </div>
         </div>
       </div>
       <div v-else>
-        <Vue3JsonToHtml :data="data[row]" />
+        <VueJsonToHtmlTable :data="data[row]" />
       </div>
     </div>
   </div>
@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: "Vue3JsonToHtml",
+  name: "VueJsonToHtmlTable",
   props: {
     data: {
       type: Object

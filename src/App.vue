@@ -1,15 +1,15 @@
 <template>
-  <Vue3JsonToHtml :data="jsonData" />
+  <VueJsonToHtmlTable :data="jsonData" />
 </template>
 
 <script>
-import Vue3JsonToHtml from './components/';
+import VueJsonToHtmlTable from './components/';
 import json from "./data.json";
 
 export default {
   name: "App",
   components: {
-    Vue3JsonToHtml
+    VueJsonToHtmlTable
   },
   data() {
     return {
